@@ -17,11 +17,9 @@
   "devDependencies": {},
   "jspm": {
     "registry": "github",
-    "main": "index",
+    "main": false,
     "format": "amd",
     "devDependencies": {}
   },
-  "dependencies": {
-    "jspm": "^0.16.53"
-  }
+  "dependencies": {}
 }
