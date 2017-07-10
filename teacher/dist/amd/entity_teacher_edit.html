@@ -1,0 +1,25 @@
+<template>
+	<section>
+		<h1>${teacher.tcd} Edit Page</h1>
+		<form submit.trigger="saveNewValue()">
+			<div class="form-group">
+				<label>First Name:</label>
+				<input class="form-control" type="text" value.bind="teacher.firstName"></input>
+			</div>
+
+			<div class="form-group">
+				<label>Last Name:</label>
+				<input class="form-control" type="text" value.bind="teacher.lastName"></input>
+			</div>
+
+			<div class="form-group">
+				<button type="submit" class="btn btn-success">Save</button>
+				<a if.bind="teacher.id"
+					href.bind="{teacherId: teacher.id} | route : 'teacher'"
+					class="btn btn-default">
+					Cancel
+				</a>
+			</div>
+		</form>
+	</section>
+</template>

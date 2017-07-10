@@ -1,0 +1,23 @@
+<template>
+	<section>
+		<h1>${institution.fullName} Details</h1>
+		<ul class="list-group">
+			<li class="list-group-item">Full Name: ${institution.fullName}</li>
+			<li class="list-group-item">Institution ID: ${institution.iid}</li>
+			<li class="list-group-item">Local Storage: ${institution.localStorage}</li>
+			<li class="list-group-item">Date Created: ${institution.dateCreated}</li>
+			<li class="list-group-item">Date Modified: ${institution.dateModified}</li>
+			<li class="list-group-item">Fluency License: ${institution.fluencyLicense}</li>
+			<li class="list-group-item">Highest Grade: ${institution.gradeMax}</li>
+			<li class="list-group-item">Lowest Grade: ${institution.gradeMin}</li>
+			<li class="list-group-item">Current Year: ${institution.licenseYearCur}</li>
+			<li class="list-group-item">Max Year: ${institution.licenseYearMax}</li>
+			<li class="list-group-item">Min Year: ${institution.licenseYearMin}</li>
+			<li class="list-group-item">Allow Local Storage: ${institution.localStorage}</li>
+		</ul>
+		<div>
+			<a if.bind="institution.iid" href.bind="{iid: institution.iid} | route : 'institution-teachers'" class="btn btn-primary">Teacher</a>
+			<a if.bind="institution.iid" href.bind="{iid: institution.iid} | route : 'institution-classes'" class="btn btn-success">Classes</a>
+		</div>
+	</section>
+</template>

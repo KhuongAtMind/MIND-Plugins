@@ -1,0 +1,21 @@
+<template>
+	<section>
+		<h1>Institutions in ${district.fullName}</h1>
+		<div>
+			<div>
+				<div repeat.for="institution of district.institutions & oneTime & signal:'institutions-refresh'">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2 class="panel-title">${institution.fullName}</h2>
+						</div>
+						<div class="panel-body">
+							<a if.bind="institution.iid" href.bind="{iid: institution.iid} | route : 'institution'" class="btn btn-default">Detail</a>
+							<a if.bind="institution.iid" href.bind="{iid: institution.iid} | route : 'institution-teachers'" class="btn btn-primary">Teacher</a>
+							<a if.bind="institution.iid" href.bind="{iid: institution.iid} | route : 'institution-classes'" class="btn btn-success">Classes</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</template>

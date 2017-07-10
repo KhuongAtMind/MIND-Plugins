@@ -1,0 +1,17 @@
+{
+	"extends": "standard",
+	"plugins": [
+		"standard",
+		"promise"
+	],
+	"parser": "babel-eslint",
+	"env": {
+		"browser": true
+	},
+	"rules": {
+		"semi": 0,
+		"no-tabs": 0,
+		"indent": [ 2, "tab" ],
+		"handle-callback-err": 0
+	}
+}

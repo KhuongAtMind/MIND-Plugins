@@ -1,0 +1,13 @@
+<template>
+	<section>
+		<h1>${teacher.firstName} ${teacher.lastName} Details Page</h1>
+		<ul class="list-group">
+			<li class="list-group-item">Name: ${teacher.firstName} ${teacher.lastName}</li>
+			<li class="list-group-item">Active: ${teacher.active}</li>
+			<li class="list-group-item">ID: ${teacher.id}</li>
+			<li class="list-group-item">TCD: ${teacher.tcd}</li>
+			<li class="list-group-item">Username: ${teacher.username}</li>
+		</ul>
+		<a if.bind="teacher.id" href.bind="{teacherId: teacher.id} | route : 'teacher-edit'" class="btn btn-default">Edit</a>
+	</section>
+</template>

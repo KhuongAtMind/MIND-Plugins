@@ -1,0 +1,6 @@
+district/node_modules
+institution/node_modules
+teacher/node_modules
+teacher/jspm_packages
+institution/jspm_packages
+district/jspm_packages

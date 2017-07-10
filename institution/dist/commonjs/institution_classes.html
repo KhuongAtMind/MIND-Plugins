@@ -1,0 +1,12 @@
+<template>
+	<section>
+		<h1>${institution.fullName} Classes</h1>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<ul class="list-group">
+				<li repeat.for="class of institution.classes & oneTime & signal:'classes-refresh'" class="list-group-item">
+					${class.iid} | ${class.gcd} | ${class.tcd}
+				</li>
+			</ul>
+		</div>
+	</section>
+</template>
